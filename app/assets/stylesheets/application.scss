@@ -3,3 +3,13 @@
 
 // Your CSS partials
 @import "pages/index";
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+section {
+  height: 100vh;
+}

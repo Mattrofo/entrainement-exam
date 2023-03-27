@@ -1,10 +1,18 @@
-<h1> All posts </h1>
 
 
-<% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <p><%= post.description %></p>
-  <p>
-    <a href="<%= post_path(post.id) %>" class="btn btn-primary"> Read the post </a>
-  </p>
-<% end %>
+
+<section style="padding: 5rem;">
+  <h1> All posts </h1>
+
+
+  <% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <p><%= post.description %></p>
+    <p>
+      <a href="<%= post_path(post.id) %>" class="btn btn-primary"> Read the post</a>
+      <a href="<%= edit_post_path(post.id)  %>" > Edit </a>
+      <%= link_to "Delete", post_path(post), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
+    </p>
+  <% end %>
+</section>

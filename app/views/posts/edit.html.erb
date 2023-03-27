@@ -1,5 +1,5 @@
 <section>
-<h1 class="h1_form_new">Create a post</h1>
+<h1 class="h1_form_new">Edit a post</h1>
   <div class="form_new">
     <%= form_for @post do |f| %>
       <div class="form-group">
@@ -11,7 +11,7 @@
         <%= f.text_area :description, class: 'form-control' %>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create the post</button>
+        <button type="submit" class="btn btn-primary">Edit the post</button>
       </div>
     <% end %>
   </div>
