@@ -11,10 +11,13 @@ require 'faker'
 
 p "------ Starting deleting data ----------"
 
-Restaurant.destroy_all
+Post.destroy_all
 
 p "------ Create data ----------"
 
 10.times do
-
+  Post.create(
+    title: Faker::Book.title,
+    description: Faker::JapaneseMedia::Naruto.eye
+  )
 end
